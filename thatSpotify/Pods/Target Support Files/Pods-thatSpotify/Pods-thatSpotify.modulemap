@@ -1,0 +1,6 @@
+framework module Pods_thatSpotify {
+  umbrella header "Pods-thatSpotify-umbrella.h"
+
+  export *
+  module * { export * }
+}
