@@ -31,6 +31,7 @@
 		51BF393A271B710D00E9E2AD /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BF3939271B710D00E9E2AD /* UserProfile.swift */; };
 		51BF393C271CB3D100E9E2AD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BF393B271CB3D100E9E2AD /* Extensions.swift */; };
 		51BF393E271E0EFE00E9E2AD /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BF393D271E0EFE00E9E2AD /* AuthResponse.swift */; };
+		51D2E912272208B80002197E /* SettingsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D2E911272208B80002197E /* SettingsModels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		51BF3939271B710D00E9E2AD /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		51BF393B271CB3D100E9E2AD /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		51BF393D271E0EFE00E9E2AD /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
+		51D2E911272208B80002197E /* SettingsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 				51BF3937271B710200E9E2AD /* Artist.swift */,
 				51BF3939271B710D00E9E2AD /* UserProfile.swift */,
 				51BF393D271E0EFE00E9E2AD /* AuthResponse.swift */,
+				51D2E911272208B80002197E /* SettingsModels.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				51BF393C271CB3D100E9E2AD /* Extensions.swift in Sources */,
 				51BF391C271B6FFA00E9E2AD /* LibraryViewController.swift in Sources */,
 				51BF3938271B710200E9E2AD /* Artist.swift in Sources */,
+				51D2E912272208B80002197E /* SettingsModels.swift in Sources */,
 				51BF392A271B705D00E9E2AD /* PlaylistViewController.swift in Sources */,
 				51BF3900271B6DC800E9E2AD /* SceneDelegate.swift in Sources */,
 				51BF3928271B704F00E9E2AD /* PlayerViewController.swift in Sources */,
