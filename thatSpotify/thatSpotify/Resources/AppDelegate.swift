@@ -16,6 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let window = UIWindow(frame: UIScreen.main.bounds)
         if AuthManager.shared.isSignedIn {
+            // refresh the token if needed as soon as the app launches
+            AuthManager.shared.refreshAccessToken(completion: nil)
             window.rootViewController = TabBarViewController()
         } else {
             let navVC = UINavigationController(rootViewController: WelcomeViewController())
