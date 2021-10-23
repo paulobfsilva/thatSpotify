@@ -37,6 +37,7 @@
 		51D2E91627240E180002197E /* APIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D2E91527240E180002197E /* APIImage.swift */; };
 		51D2E918272410EA0002197E /* FeaturedPlaylistsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D2E917272410EA0002197E /* FeaturedPlaylistsResponse.swift */; };
 		51D2E91A272414F70002197E /* RecommendedGenresResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D2E919272414F70002197E /* RecommendedGenresResponse.swift */; };
+		51D2E91C2724A3200002197E /* RecommendationsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D2E91B2724A3200002197E /* RecommendationsResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		51D2E91527240E180002197E /* APIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIImage.swift; sourceTree = "<group>"; };
 		51D2E917272410EA0002197E /* FeaturedPlaylistsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedPlaylistsResponse.swift; sourceTree = "<group>"; };
 		51D2E919272414F70002197E /* RecommendedGenresResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedGenresResponse.swift; sourceTree = "<group>"; };
+		51D2E91B2724A3200002197E /* RecommendationsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationsResponse.swift; sourceTree = "<group>"; };
 		B7411A71C2AEF933E2B05EA0 /* Pods-thatSpotify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thatSpotify.release.xcconfig"; path = "Target Support Files/Pods-thatSpotify/Pods-thatSpotify.release.xcconfig"; sourceTree = "<group>"; };
 		FEFC7E3695571C16EE96CE87 /* Pods_thatSpotify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_thatSpotify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -150,6 +152,7 @@
 				51D2E91527240E180002197E /* APIImage.swift */,
 				51D2E917272410EA0002197E /* FeaturedPlaylistsResponse.swift */,
 				51D2E919272414F70002197E /* RecommendedGenresResponse.swift */,
+				51D2E91B2724A3200002197E /* RecommendationsResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				51BF393E271E0EFE00E9E2AD /* AuthResponse.swift in Sources */,
 				51D2E91427240D330002197E /* NewReleasesResponse.swift in Sources */,
 				51D2E91627240E180002197E /* APIImage.swift in Sources */,
+				51D2E91C2724A3200002197E /* RecommendationsResponse.swift in Sources */,
 				51BF3936271B70F900E9E2AD /* AudioTrack.swift in Sources */,
 				51BF3902271B6DC800E9E2AD /* HomeViewController.swift in Sources */,
 				51BF3920271B701F00E9E2AD /* AuthViewController.swift in Sources */,
