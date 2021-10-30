@@ -8,9 +8,9 @@
 import UIKit
 
 enum BrowseSelectionType {
-    case newReleases // 1
-    case featuredPlaylists // 2
-    case recommendedTracks // 3
+    case newReleases(viewModels: [NewReleasesCellViewModel]) // view model array as associated value
+    case featuredPlaylists(viewModels: [NewReleasesCellViewModel]) // 2
+    case recommendedTracks(viewModels: [NewReleasesCellViewModel]) // 3
 }
 
 class HomeViewController: UIViewController {
@@ -28,6 +28,8 @@ class HomeViewController: UIViewController {
         spinner.hidesWhenStopped = true
         return spinner
     }()
+    
+    private var sections = [BrowseSelectionType]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,10 +70,33 @@ class HomeViewController: UIViewController {
     }
     
     private func fetchData() {
+        let group = DispatchGroup()
+        group.enter()
+        group.enter()
+        group.enter()
+        
         // New Releases
+        APICaller.shared.getNewReleases { result in
+            defer {
+                group.leave()
+            }
+            switch result {
+            case .success(let model): break
+            case .failure(let error): break
+            }
+        }
         // Featured Playlists,
+        APICaller.shared.getFeaturedPlaylists { result in
+            switch result {
+            case .success(let model): break
+            case .failure(let error): break
+            }
+        }
         // Recommended Tracks,
         APICaller.shared.getRecommendedGenres{ result in
+            defer {
+                group.leave()
+            }
             switch result {
             case .success(let model):
                 let genres = model.genres
@@ -81,13 +106,28 @@ class HomeViewController: UIViewController {
                         seeds.insert(random)
                     }
                 }
-                APICaller.shared.getRecommendations(genres: seeds) { result in
-                    
+                APICaller.shared.getRecommendations(genres: seeds) { recommendedResults in
+                    defer {
+                        group.leave()
+                    }
+                    switch recommendedResults {
+                    case .success(let model): break
+                    case .failure(let error): break
+                    }
                 }
             case .failure(let error): break
                 
             }
         }
+        
+        group.notify(queue: .main) {
+            
+        }
+        
+        // Configure models
+        sections.append(.newReleases(viewModels: []))
+        sections.append(.featuredPlaylists(viewModels: []))
+        sections.append(.recommendedTracks(viewModels: []))
     }
 
 }
@@ -98,7 +138,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 3
+        return sections.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
