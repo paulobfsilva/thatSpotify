@@ -15,6 +15,10 @@ enum BrowseSelectionType {
 
 class HomeViewController: UIViewController {
 
+    private var newAlbums: [Album] = []
+    private var playlists: [Playlist] = []
+    private var tracks: [AudioTrack] = []
+    
     private var collectionView: UICollectionView = UICollectionView(
         frame: .zero,
         collectionViewLayout: UICollectionViewCompositionalLayout { sectionIndex, _ -> NSCollectionLayoutSection? in
@@ -147,10 +151,14 @@ class HomeViewController: UIViewController {
         }
     }
     
+    
     private func configureModels(newAlbums: [Album],
                                  playlists: [Playlist],
                                  tracks: [AudioTrack]
     ) {
+        self.newAlbums = newAlbums
+        self.playlists = playlists
+        self.tracks = tracks
         // Configure models
         sections.append(.newReleases(viewModels: newAlbums.compactMap({
             return NewReleasesCellViewModel(
