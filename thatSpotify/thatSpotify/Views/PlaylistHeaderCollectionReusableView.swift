@@ -9,7 +9,7 @@ import SDWebImage
 import UIKit
 
 protocol PlaylistHeaderCollectionReusableViewDelegate: AnyObject {
-    func playlistHeaderCollectionReusableViewDidTapPlayAll(_ hreader: PlaylistHeaderCollectionReusableView)
+    func playlistHeaderCollectionReusableViewDidTapPlayAll(_ header: PlaylistHeaderCollectionReusableView)
 }
 
 final class PlaylistHeaderCollectionReusableView: UICollectionReusableView {

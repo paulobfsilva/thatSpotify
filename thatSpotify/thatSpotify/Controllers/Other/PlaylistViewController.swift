@@ -22,7 +22,7 @@ class PlaylistViewController: UIViewController {
             NSCollectionLayoutBoundarySupplementaryItem(
                 layoutSize: NSCollectionLayoutSize(
                     widthDimension: .fractionalWidth(1),
-                    heightDimension: .fractionalHeight(1)
+                    heightDimension: .fractionalWidth(1)
                 ),
                 elementKind: UICollectionView.elementKindSectionHeader,
                 alignment: .top)
